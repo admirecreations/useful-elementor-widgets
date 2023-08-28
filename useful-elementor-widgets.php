@@ -36,10 +36,10 @@ function register_widgets($widgets_manager)
 {
 
     require_once(__DIR__ . '/widgets/video-card-widget.php');
-    require_once(__DIR__ . '/widgets/text-editor.php');
+    require_once(__DIR__ . '/widgets/admire-text-editor.php');
 
     $widgets_manager->register(new \Elementor_Video_Card_Widget());
-    $widgets_manager->register(new \Widget_Text_Editor());
+    $widgets_manager->register(new \Admire_Widget_Text_Editor());
 }
 add_action('elementor/widgets/register', 'register_widgets');
 
@@ -55,7 +55,6 @@ add_action('elementor/widgets/register', 'register_widgets');
  */
 function add_elementor_widget_categories($elements_manager)
 {
-
     $elements_manager->add_category(
         'admire',
         [
